@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: silver;
+    font-family: sans-serif;
+}
+
+.container_fluid {
+    width: 100%;
+    padding: 0 16px;
+}
+
+/* ======== הפס השחור העליון ========= */
+header {
+    min-height: 90px;
+    background: black;
+    color: white;
+}
+
+/* עיצוב הקונטיינר של ההדר */
+header .container {
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    /* פיזור האלמנטים בקצוות */
+    justify-content: space-between;
+    /* מפזר את האלמנטים משני הצדדים */
+    position: relative;
+    /* דרוש עבור ה-absolute של הלוגו */
+}
+
+header .logo {
+    position: absolute;
+    left: -25px;
+    top: -28px;
+}
+
+header nav {
+    /* מאפשר לניווט לתפוס מקום גמיש */
+    flex: 1;
+    /* ממרכז את הקישורים */
+    text-align: center;
+    /* מוריד את הניווט ב-10 פיקסלים */
+    margin-top: 20px;
+}
+
+header nav a {
+    color: white;
+    margin-right: 25px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+
+header nav a:hover {
+    color: red;
+    margin-right: 25px;
+    text-decoration: none;
+    font-size: 40px;
+    /* עיגול קל של הפינות */
+    border-radius: 5px;
+}
+
+header button {
+    color: red;
+    background: black;
+    margin-right: 16px;
+    font-size: 32px;
+    /* מוריד את הניווט ב-10 פיקסלים */
+    margin-top: 20px;
+}
+
+.strip {
+    background: skyblue;
+    min-height: 500px;
+    /*הוספת תמונה*/
+    background-image: url('images/headPicture.jpg');
+    /* סידור פרופורציות התמונה לשים לגודל */
+    background-size: cover;
+    /* גלילה מגניבה כשהרקע נשאר מאחור */
+    background-attachment: fixed;
+    background-position: bottom center;
+}
+
+
+/* ========================== עיצוב הכרטיסים =========================== */
+
+.card {
+    margin: 10px;
+    /* ריווח קטן סביב הכרטיסים */
+    width: 300px;
+    /* גודל אחיד */
+    border: 2px solid red;
+    border-radius: 10px;
+    background: whitesmoke;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.baget {
+    background-color: red;
+    /* רקע אדום */
+    color: white;
+    /* טקסט לבן */
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* תמונת האופנוע */
+.card_img {
+    width: 100%;
+    height: auto;
+    /* אורך הכרטיסיות */
+    margin-bottom: 10px;
+
+}
+
+/* סגנון התוכן */
+.card_content {
+    padding: 15px;
+}
+
+/* מחיר */
+.card_price {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* הכפתור */
+.card_button {
+
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.card_button:hover {
+    background-color: darkred;
+}
+
+.main {
+    /* שימוש ב-Flexbox */
+    display: flex;
+    /* כדי שהכרטיסיות יירדו לשורות נוספות */
+    flex-wrap: wrap;
+    /* ממרכז את הכרטיסיות */
+    justify-content: center;
+    /* מיישר אנכית */
+    align-items: center;
+
+    /* רווחים קטנים יותר בין הכרטיסיות */
+    gap: 15px;
+    padding: 20px;
+    background-image: url(images/headPicture7.jpg);
+    /* סידור פרופורציות התמונה לשים לגודל */
+    background-size: cover;
+    /* גלילה מגניבה כשהרקע נשאר מאחור */
+    background-attachment: fixed;
+    background-position: center center;
+
+    /* שינוי הגובה */
+    min-height: 800px;
+    /* גובה מינימלי */
+    height: auto;
+    /* מתאים את הגובה לתוכן */
+
+}
